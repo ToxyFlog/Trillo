@@ -11,6 +11,9 @@
     height:7rem;
     background-color: #fff;
     border-bottom: $grey-light_2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .content{
