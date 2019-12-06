@@ -3,6 +3,7 @@
     margin: 8rem auto;
     background-color: $grey-light_1;
     box-shadow: 0 2rem 6rem rgba(0, 0, 0, .3);
+    border-radius: 5px;
 
     min-height: 60rem;
 }
@@ -14,6 +15,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 .content{
@@ -23,9 +26,12 @@
 .sidebar{
     background-color: $grey-dark_1;
     flex:0 0 17%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hotel-view{
     background-color: #fff;
-    flex: 1;    
+    flex: 1;
 }
