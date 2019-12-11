@@ -11,7 +11,7 @@
 .header{
     height:7rem;
     background-color: #fff;
-    border-bottom: $grey-light_2;
+    border-bottom: 1px solid $grey-light_2;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,5 +33,26 @@
 
 .hotel-view{
     background-color: #fff;
+    flex: 1;
+}
+
+.detail{
+    display:flex;
+    padding: 4.5rem;
+    background-color: $grey-light_1;
+    border-bottom: 1px solid $grey-light_2;
+}
+
+.description{
+    background: white;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    box-shadow: 0 2rem 5rem rgba(0,0,0,.1);
+    padding: 3rem;
+    font-size: 1.4rem;
+}
+
+.user-reviews{
+    background: white;
     flex: 1;
 }

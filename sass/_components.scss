@@ -192,3 +192,173 @@
     padding: 2.5rem;
     color: $grey-light_4;
 }
+
+// HOTEL VIEW
+
+.gallery{
+    display: flex;
+
+    &__photo{
+        width: 100%;
+        display: block;
+    }
+}
+
+.overview{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $grey-light_2;
+
+    &__heading{
+        font-size: 2.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        padding: 1.5rem 3rem;
+    }
+
+    &__stars{
+        margin-right: auto;
+        display: flex;
+    }
+
+    &__location{
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+
+        &-icon{
+            margin-right: .25rem;
+        }
+    }
+
+    &__icon{
+        width:1.75rem;
+        height:1.75rem;
+        fill: $primary;
+    }
+
+    &__rating{
+        background-color: $primary-light;
+        color:#fff;
+        margin-left: 3rem;
+        padding: 0 2.25rem;
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        &-count{
+            font-size: .8rem;
+            text-transform: uppercase;
+        }
+
+        &-avarage{
+            font-size: 2.25rem;
+            font-weight: 300;
+            margin-bottom: -2px;
+        }
+    }
+}
+
+// BUTTON
+
+.button--inline{
+    border: none;
+    border-bottom:1px solid currentColor;
+    color: $primary;
+    font-size: inherit;
+    transition: all .2s;
+    padding-bottom: 2px;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover{
+        color: $grey-dark_1;
+    }
+
+    &:focus{
+        outline: none;
+        animation: pulse 1s infinite;
+    }
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+        box-shadow: none;
+    }
+
+    50%{
+        transform: scale(1.05);
+        box-shadow: 0 1.2rem 1.75rem rgba(0,0,0,.35);
+    }
+
+    100%{
+        transform: scale(1);
+        box-shadow: none;
+    }
+}   
+
+// PARAGRAPH
+
+.paragraph:not(:last-of-type){
+    margin-bottom: 2rem;
+}
+
+// LIST
+
+.list{
+    margin: 3rem 0;
+    list-style: none;
+    padding: 3rem 0;
+    border-top: 1px solid $grey-light_2;
+    border-bottom: 1px solid $grey-light_2;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item{
+        flex: 0 0 50%;
+        margin-bottom: .7rem;
+        display:flex;
+        align-items: center;
+
+        &::before{
+            content: "";
+            display: inline-block;
+            height: 1.25rem;
+            width: 1.25rem;
+            margin-right: .5rem;
+            background-color: $primary;
+            -webkit-mask-image: url(../img/chevron-thin-right.svg);
+            -webkit-mask-size: cover;
+            mask-image: url(../img/chevron-thin-right.svg);
+            mask-size: cover;
+        }
+    }
+}
+
+
+// RECOMEND
+
+.recommend{
+    font-size: 1.3rem;
+    color:$grey-dark_3;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__photo{
+        box-sizing: content-box;
+        height: 4.2rem;
+        width: 4.2rem;
+        border-radius: 50%;
+        border:3px solid $grey-light_1;
+
+        &:not(:last-child){
+            margin-right: -1.7rem;
+        }
+    }
+}

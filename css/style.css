@@ -18,8 +18,7 @@ body {
   color: #777;
   background-image: linear-gradient(to right bottom, #FF3366, #BA265D);
   background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh; }
+  background-repeat: no-repeat; }
 
 .logo {
   height: 3.25rem;
@@ -153,6 +152,123 @@ body {
   padding: 2.5rem;
   color: #ccc; }
 
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    width: 100%;
+    display: block; }
+
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f4f2f2; }
+  .overview__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 1.5rem 3rem; }
+  .overview__stars {
+    margin-right: auto;
+    display: flex; }
+  .overview__location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center; }
+    .overview__location-icon {
+      margin-right: .25rem; }
+  .overview__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: #eb2f64; }
+  .overview__rating {
+    background-color: #FF3366;
+    color: #fff;
+    margin-left: 3rem;
+    padding: 0 2.25rem;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    .overview__rating-count {
+      font-size: .8rem;
+      text-transform: uppercase; }
+    .overview__rating-avarage {
+      font-size: 2.25rem;
+      font-weight: 300;
+      margin-bottom: -2px; }
+
+.button--inline {
+  border: none;
+  border-bottom: 1px solid currentColor;
+  color: #eb2f64;
+  font-size: inherit;
+  transition: all .2s;
+  padding-bottom: 2px;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer; }
+  .button--inline:hover {
+    color: #333; }
+  .button--inline:focus {
+    outline: none;
+    animation: pulse 1s infinite; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: none; }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1.2rem 1.75rem rgba(0, 0, 0, 0.35); }
+  100% {
+    transform: scale(1);
+    box-shadow: none; } }
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.list {
+  margin: 3rem 0;
+  list-style: none;
+  padding: 3rem 0;
+  border-top: 1px solid #f4f2f2;
+  border-bottom: 1px solid #f4f2f2;
+  display: flex;
+  flex-wrap: wrap; }
+  .list__item {
+    flex: 0 0 50%;
+    margin-bottom: .7rem;
+    display: flex;
+    align-items: center; }
+    .list__item::before {
+      content: "";
+      display: inline-block;
+      height: 1.25rem;
+      width: 1.25rem;
+      margin-right: .5rem;
+      background-color: #eb2f64;
+      -webkit-mask-image: url(../img/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+      mask-image: url(../img/chevron-thin-right.svg);
+      mask-size: cover; }
+
+.recommend {
+  font-size: 1.3rem;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .recommend__photo {
+    box-sizing: content-box;
+    height: 4.2rem;
+    width: 4.2rem;
+    border-radius: 50%;
+    border: 3px solid #faf9f9; }
+    .recommend__photo:not(:last-child) {
+      margin-right: -1.7rem; }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -164,7 +280,7 @@ body {
 .header {
   height: 7rem;
   background-color: #fff;
-  border-bottom: #f4f2f2;
+  border-bottom: 1px solid #f4f2f2;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -183,4 +299,22 @@ body {
 
 .hotel-view {
   background-color: #fff;
+  flex: 1; }
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: #faf9f9;
+  border-bottom: 1px solid #f4f2f2; }
+
+.description {
+  background: white;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  font-size: 1.4rem; }
+
+.user-reviews {
+  background: white;
   flex: 1; }
