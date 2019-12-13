@@ -211,9 +211,14 @@ body {
   cursor: pointer; }
   .button--inline:hover {
     color: #333; }
+    .button--inline:hover span {
+      margin-left: 8px; }
   .button--inline:focus {
     outline: none;
     animation: pulse 1s infinite; }
+  .button--inline span {
+    margin-left: 3px;
+    transition: margin-left .2s; }
 
 @keyframes pulse {
   0% {
@@ -269,6 +274,99 @@ body {
     .recommend__photo:not(:last-child) {
       margin-right: -1.7rem; }
 
+.review {
+  background-color: #fff;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden; }
+  .review__text {
+    margin-bottom: 2rem;
+    z-index: 2;
+    position: relative; }
+  .review__user {
+    display: flex; }
+    .review__user-box {
+      margin-right: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column; }
+    .review__user-name {
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      margin-bottom: .4rem; }
+    .review__user-date {
+      font-size: 1rem;
+      color: #999; }
+  .review__photo {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    margin-right: 1.5rem; }
+  .review__rating {
+    align-self: center;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #eb2f64; }
+  .review::before {
+    content: "\201C";
+    font-size: 20rem;
+    position: absolute;
+    top: -2.75rem;
+    left: -1rem;
+    line-height: 1;
+    color: #f4f2f2;
+    font-family: sans-serif;
+    z-index: 1; }
+
+.cta {
+  padding: 3.5rem;
+  text-align: center; }
+  .cta__book-now {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem; }
+
+.btn {
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 100px;
+  text-transform: uppercase;
+  font-weight: 300;
+  background-image: linear-gradient(to right, #FF3366, #BA265D);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer; }
+  .btn__visible {
+    display: inline-block;
+    padding: 2rem 5rem;
+    transition: all .2s;
+    width: 100%;
+    height: 100%; }
+  .btn__hidden {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    padding: 2rem 0;
+    height: 100%;
+    width: 100%;
+    transition: all .2s; }
+  .btn:hover {
+    background-image: linear-gradient(to left, #FF3366, #BA265D); }
+  .btn:hover .btn__visible {
+    transform: translateY(100%); }
+  .btn:hover .btn__hidden {
+    top: 0; }
+  .btn:focus {
+    outline: none;
+    animation: pulse 1s infinite; }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -305,16 +403,18 @@ body {
   display: flex;
   padding: 4.5rem;
   background-color: #faf9f9;
-  border-bottom: 1px solid #f4f2f2; }
+  border-bottom: 1px solid #f4f2f2;
+  font-size: 1.4rem; }
 
 .description {
   background: white;
   flex: 0 0 60%;
   margin-right: 4.5rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
-  padding: 3rem;
-  font-size: 1.4rem; }
+  padding: 3rem; }
 
 .user-reviews {
-  background: white;
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
