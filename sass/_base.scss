@@ -25,6 +25,10 @@ $grey-dark_3: #999;
 html{
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px
+
+    @media only screen and (max-width: 68.75em){
+        font-size: 55%;
+    }
 }
 
 body{
@@ -34,5 +38,4 @@ body{
     color: $grey-dark_2;
     background-image: linear-gradient(to right bottom, $primary-light, $primary-dark);
     background-size: cover;
-    background-repeat: no-repeat;
 }
