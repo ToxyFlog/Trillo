@@ -11,6 +11,7 @@
         <title>Trillo &mdash; Your all-in-one booking app</title>
     </head>
     <body>
+
         <div class="container">
             <header class="header">
                 <img class="logo" src="/img/logo.png" alt="Logo">
@@ -39,12 +40,13 @@
                         <span class="user-nav__notification">13</span>
                     </div>
 
-                    <div class="user-nav__user">
+                   <label for="menu" class="user-nav__user">
                         <img src="/img/user.jpg" alt="Your Photo" class="user-nav__user-photo">
                         <span class="user-nav__user-name">Jonas</span>
-                    </div>
+                    </label>
                 </nav>
             </header>
+            
 
             <div class="content">
                 <nav class="sidebar">
@@ -108,6 +110,34 @@
                         <figure class="gallery__item">
                             <img src="img/hotel-3.jpg" alt="Third hotel's photo" class="gallery__photo">
                         </figure>
+
+                        <input type="checkbox" id="menu" class="user-menu__checkbox">
+
+                        <div class="user-menu__container">
+                            <div class="user-menu__item">
+                                <button class="user-menu__button">Archive</button>
+                                
+                                <svg class="user-menu__icon">
+                                    <use xlink:href="img/sprite.svg#icon-archive"></use>
+                                </svg>
+                            </div>
+
+                            <div class="user-menu__item">
+                                <button class="user-menu__button">Profile</button>
+                                
+                                <svg class="user-menu__icon">
+                                    <use xlink:href="img/sprite.svg#icon-user"></use>
+                                </svg>
+                            </div>
+
+                            <div class="user-menu__item">
+                                <button class="user-menu__button">Settings</button>
+                                
+                                <svg class="user-menu__icon">
+                                    <use xlink:href="img/sprite.svg#icon-cog"></use>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="overview">
